@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Automation Project</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="7049510ef2b21c4503cc7e277654ef59a316b0eadf5c6a1e5932037b3a56a051.html">Compra De Productos</a></span>
+                > <span class="truncate-60"><a
+                    href="ae7fdbc5791bb00f5538a91d924d6d81eb48b0a5023c3584712e17c31d6ef6ee.html">Realizar el proceso de pago </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-01-2024 20:00</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Compra De Productos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo como usuario<br />
+Quiero añadir uno o varios producto al carrito de compras<br />
+Para realizar una compra en el aplicativo
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="112c47982c7cbe75f866bf7c232cbc761e519982f073294d72c714edcb9dcde1.html">Este
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Realizar el proceso de pago
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is clickable but: no matching element found by [CLICKDEPARTAMENTO located with: xpath: //*[@id='ship-state']] was not clicked</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.sofka.tasks.AutomationPage.PaymentProcessTasks.performAs(PaymentProcessTasks.java:18)<br />co.com.sofka.stepdefinitions.Page.PaymentProcess.completaLaInformacionDeEnvioYPago(PaymentProcess.java:29)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="pagesource15070057218194792643.html" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="d2985d115acebf5b5c61835dbf682e4a8fcd0ccc3375aa20b86a6c3095dc9256.png" title=" Given que el usuario tiene art&iacute;culos en el carrito" width="1318"/>
+                <img src="d2985d115acebf5b5c61835dbf682e4a8fcd0ccc3375aa20b86a6c3095dc9256.png" title=" Diesel add multiple product" width="1318"/>
+                <img src="d2985d115acebf5b5c61835dbf682e4a8fcd0ccc3375aa20b86a6c3095dc9256.png" title=" Diesel opens the Add multiple product ui" width="1318"/>
+                <img src="f5e6207e54506f2d81df46bbc8340c06e41247633d029adaeb3f9bb2eb2ac838.png" title=" Diesel clicks on AddProduct1" width="1318"/>
+                <img src="d834efb16fa3dc94cf02e59ac317da8f5806cc1fe35712d3bc9468d71c18461d.png" title=" Diesel clicks on AddProduct1 (completed)" width="1318"/>
+                <img src="bb4cc194eb686253444b85eed63c2eb263eadf14f6d7bd50ee6be493c1ca7c89.png" title=" Diesel clicks on Regresar" width="1318"/>
+                <img src="3c0dc94cd0d7f11b5bf134ff081cc55b223e8fb255ac67ef039d867301ff7ffe.png" title=" Diesel clicks on Regresar (completed)" width="1318"/>
+                <img src="32f6adc49393f46cf5df240a13759afb19fe59ab7065f9d80dcc2b8f14016dcd.png" title=" Diesel clicks on AddProduct2" width="1318"/>
+                <img src="257f0a2dded75a52871b238625cfcd0f93c2d5fd8d082dde523bc483a5323583.png" title=" Diesel clicks on AddProduct2 (completed)" width="1318"/>
+                <img src="f93805fb72ea8c55f552a4d5f2d408fed86235be640919318494a7525cc92734.png" title=" Diesel add multiple product (completed)" width="1318"/>
+                <img src="f93805fb72ea8c55f552a4d5f2d408fed86235be640919318494a7525cc92734.png" title=" Given que el usuario tiene art&iacute;culos en el carrito (completed)" width="1318"/>
+                <img src="b42f5beea19ec1c616b464096b96697a00ee7084715f7975dc45403791c94609.png" title=" When el usuario procede al pago" width="1318"/>
+                <img src="b42f5beea19ec1c616b464096b96697a00ee7084715f7975dc45403791c94609.png" title=" Diesel paymentprocess one" width="1318"/>
+                <img src="b42f5beea19ec1c616b464096b96697a00ee7084715f7975dc45403791c94609.png" title=" Diesel clicks on BUTTONCONTINUAR" width="1318"/>
+                <img src="5e13a338dceaec4a8c508ae65086894229913d11a5ef6f69a7cd4f97136e3323.png" title=" Diesel clicks on BUTTONCONTINUAR (completed)" width="1318"/>
+                <img src="5e13a338dceaec4a8c508ae65086894229913d11a5ef6f69a7cd4f97136e3323.png" title=" Diesel clicks on FINALIZARCOMPRA" width="1318"/>
+                <img src="3a66cd30a5ddde821fdd7858f6e95b02c7be4978837f86b5c206573f3c07f2db.png" title=" Diesel clicks on FINALIZARCOMPRA (completed)" width="1318"/>
+                <img src="e06d452922fd8912a663e2e38037329e9bf6bb551506f7597cae736a006b3c6c.png" title=" Diesel enters 'Examplejsjs@gmail.com' into INGRESAREMAIL" width="1318"/>
+                <img src="f2e8035fb10ac62feb2a4e54c044b9b3330e99776164626a9f323d63c85976c0.png" title=" Diesel enters 'Examplejsjs@gmail.com' into INGRESAREMAIL (completed)" width="1318"/>
+                <img src="f2e8035fb10ac62feb2a4e54c044b9b3330e99776164626a9f323d63c85976c0.png" title=" Diesel clicks on CONTINUARENINGRESAREMAIL" width="1318"/>
+                <img src="b6900bb3eba42ea9b9635521eae40a438e08568914a04737497dfe57645913ad.png" title=" Diesel clicks on CONTINUARENINGRESAREMAIL (completed)" width="1318"/>
+                <img src="57b92d11518fde712b625a98057ed50b77c4b156d42f03416a23688a48bf0b99.png" title=" Diesel paymentprocess one (completed)" width="1318"/>
+                <img src="57b92d11518fde712b625a98057ed50b77c4b156d42f03416a23688a48bf0b99.png" title=" When el usuario procede al pago (completed)" width="1318"/>
+                <img src="4b7e5ae7ddf0a9dcbccc3dd90e75b41c83b728a7b038cf371bffa1e170ed43ff.png" title=" And completa la informaci&oacute;n de env&iacute;o y pago" width="1318"/>
+                <img src="4b7e5ae7ddf0a9dcbccc3dd90e75b41c83b728a7b038cf371bffa1e170ed43ff.png" title=" Diesel payment process tasks" width="1318"/>
+                <img src="3739df694854f9d629d6635fbe2620295a8f52e65d2edef079f76178edd4fcd7.png" title=" Diesel enters 'Carlos' into NOMBRE" width="1318"/>
+                <img src="d1750a159fb6679896c29d202002a0045af2eb898c5f25ea20aa8415c194d0ee.png" title=" Diesel enters 'Carlos' into NOMBRE (completed)" width="1318"/>
+                <img src="fb70dc0a21af964a24215a60031507142128008b57eb1ebed990d967a086261f.png" title=" Diesel enters 'Uribe' into APELLIDO" width="1318"/>
+                <img src="7cf8b3a1136e0b2417bcdd8f137f33150bb2826ab11ca0646092dbe77eb2cbe9.png" title=" Diesel enters 'Uribe' into APELLIDO (completed)" width="1318"/>
+                <img src="832e2ec794f034b6a5c60c9a3cf32283ec2b86c30244ab62b8589e04708957f8.png" title=" Diesel enters '6666666666' into CEDULA" width="1318"/>
+                <img src="7707ae0916891135fa8f8db616a5030406dd43349ef4c20c66ffe1e4cf437fa4.png" title=" Diesel enters '6666666666' into CEDULA (completed)" width="1318"/>
+                <img src="c0e5c6090a0f698c7453c734746144084cdeaf14b7302c5151ee4a018999d5a2.png" title=" Diesel enters '3027315615' into MOVIL" width="1318"/>
+                <img src="2585f44f4de16269c9737fb6881f37074f88a81f207727be6b79a4a3caf326c0.png" title=" Diesel enters '3027315615' into MOVIL (completed)" width="1318"/>
+                <img src="b4a349df8da8b80e01db779aa131e8aa952be0d6671d38eb58aed7f9146878a0.png" title=" Diesel clicks on BUTTONENTREGA" width="1318"/>
+                <img src="5efb0a9a1add426b3e1c37b9b75cb12296118b9af45ae07f3f78c0b3b65d06f8.png" title=" Diesel clicks on BUTTONENTREGA (completed)" width="1318"/>
+                <img src="943557bd442362473c7c65482a583093b9065196fc46c0f1ad2dc1db8fa24ba0.png" title=" Diesel payment process tasks (completed): <span class='failing-color'>FAILURE</span>" width="1318"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.0</span>
+</div>
+</body>
+</html>
