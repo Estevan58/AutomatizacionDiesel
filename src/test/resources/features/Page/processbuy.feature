@@ -9,7 +9,7 @@ Feature: Compra de productos
     When el usuario busca "Zapatos"
     Then se deberia mostrar los resultados relacionados con "Zapatos para hombre"
 
-
+  @este
   Scenario: Agregar múltiples productos al carrito
     Given que el usuario ha buscado y seleccionado varios productos
     When el usuario agrega múltiples productos al carrito
@@ -27,7 +27,7 @@ Feature: Compra de productos
     When el usuario actualiza la cantidad del producto
     Then la cantidad del producto en el carrito se actualiza correctamente
 
-  @este
+
   Scenario: Realizar el proceso de pago
     Given que el usuario tiene artículos en el carrito
     When el usuario procede al pago
@@ -61,7 +61,7 @@ Feature: Compra de productos
     Then deberia poder ver el color del producto
 
 
-  @ProductPrice
+  @este
   Scenario: Verificar el precio del producto
     Given que he accedido a la pagina de detalles del producto
     When Visualiza la informacion del producto

@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
         features ="src/test/resources/features/Page",
         glue = "co.com.sofka.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        plugin = "pretty"
-        //tags = "@este"
+        plugin = "pretty",
+        tags = "@este"
 
 
 )
